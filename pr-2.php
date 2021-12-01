@@ -68,12 +68,12 @@
         <div class="dropdown" >
             <button onclick="myFunction()" class="dropbtn">Log  in /  Sign up</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="#home">登入</a>
-                <a href="#about">註冊</a>
+                <a href="">登入</a>
+                <a href="./pr-2signUp.php">註冊</a>
               
             </div>
         </div>
-
+    
         <script>
             /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
@@ -104,9 +104,9 @@ toggle between hiding and showing the dropdown content */
 
             <div class="col-md-8 header1">自然生態</div>
             <div class="col-6 col-md-4">
-                <form action="">
+                <form action="./pr-3search.php" method="post">
 
-                    <input type="text" style=" margin-top:20px;">
+                    <input type="text" name="search" style=" margin-top:20px;">
                     <input type="submit" value="搜尋">
 
                 </form>
