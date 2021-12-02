@@ -210,7 +210,7 @@ toggle between hiding and showing the dropdown content */
             </div>
         </div>
     </div>
-
+    <button type="button" class="btn btn-warning"><a href="./pr-3Show.php" style="color:black">顯示所有商品</a> </button>
 
 
 
