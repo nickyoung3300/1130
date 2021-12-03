@@ -51,7 +51,22 @@
         ?>
         <form action="./pr-3Show.php" method="post">
 
+            <h3>修改商品</h3>
+            商品ID&nbsp;<input type="text" name="pid"><br>
+            <br>
+            商品名稱&nbsp;<input type="text" name="pn1"><br>
+            <br>
+            商品類別&nbsp;<input type="text" name="pc1"><br>
+            <br>
+            商品概述&nbsp;<input type="text" name="pd1"><br>
+            <br>
+            <input type="submit" value="修改">
+
+        </form>
+        <form action="./pr-3Show.php" method="post">
+
             <h3>新增商品</h3>
+        
             商品名稱&nbsp;<input type="text" name="pn"><br>
             <br>
             商品類別&nbsp;<input type="text" name="pc"><br>
@@ -61,6 +76,31 @@
             <input type="submit" value="新增">
 
         </form>
+        <?php
+        if (isset($_POST["pn1"]) && $_POST["pn1"]!="") {
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "test";
+    
+           
+            $conn = new mysqli($servername, $username, $password, $dbname);
+           
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "UPDATE product SET productName='$_POST[pn1]',productCate='$_POST[pc1]',productDiscr='$_POST[pd1]' WHERE productId='$_POST[pid]'";
+
+            if (mysqli_query($conn, $sql)) {
+              echo "Record updated successfully";
+            } else {
+              echo "Error updating record: " . mysqli_error($conn);
+            }
+            $conn->close();
+            header("Location:http://127.0.0.1/dashboard/1130/pr-3Show.php");
+        }
+        ?>
         <?php
         if (isset($_POST["pn"]) && $_POST["pn"]!="") {
             $servername = "localhost";
