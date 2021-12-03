@@ -9,62 +9,62 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
-            body {
-        margin-bottom: 0px;
-    }
+        body {
+            margin-bottom: 0px;
+        }
 
-    .header1 {
-        font-size: 50px;
-    }
+        .header1 {
+            font-size: 50px;
+        }
 
-    .dropbtn {
-        background-color: #3498DB;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-    }
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
 
-    .dropbtn:hover,
-    .dropbtn:focus {
-        background-color: #2980B9;
-    }
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2980B9;
+        }
 
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 150px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 150px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
 
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-    .dropdown a:hover {
-        background-color: #ddd;
-    }
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
 
-    .show {
-        display: block;
-    }
+        .show {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">首頁</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,9 +77,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./pr-3Show.php" style="font-size:large;    color:deeppink">顯示所有商品</a>
-                        
+
                     </li>
-                   
+
 
                 </ul>
                 <form class="d-flex" action="./pr-3search.php" method="post">
@@ -100,7 +100,7 @@
                     </ul>
                 </li>
             </div>
-            
+
         </div>
     </nav>
 
@@ -108,21 +108,44 @@
 
 
     <div class="container" style="text-align: center ; font-size:50px;">
-    <?php
-    $firstName=$_POST["firstname"];
-    $lastName=$_POST["lastname"];
-    $county=$_POST["county"];
-    $district=$_POST["district"];
-    $pwd=$_POST["pwd"];
-    $email=$_POST["email"];
-    echo"註冊成功";
-    echo"<h2>"."歡迎".$firstName."</h2>";
-    
+        <?php
+        
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "test";
+        
+        $firstName = $_POST["firstname"];
+        $lastName = $_POST["lastname"];
+        $county = $_POST["county"];
+        $district = $_POST["district"];
+        $pwd = hash("sha256", $_POST["pwd"]);
+        $email = $_POST["email"];
+        echo "註冊成功";
+        echo "<h2>" . "歡迎" . $firstName . "</h2>";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "INSERT INTO persons(LastName, FirstName, City, district, userPassword, userEmail) 
+        VALUES ('$lastName',' $firstName','$county','$district','$pwd','$email')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
 
 
 
 
-    ?>
+
+        ?>
     </div>
 
 
