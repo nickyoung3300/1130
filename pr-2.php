@@ -64,56 +64,45 @@
 </style>
 
 <body>
-    <header >
-        <div class="dropdown" >
-            <button onclick="myFunction()" class="dropbtn">Log  in /  Sign up</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="">登入</a>
-                <a href="./pr-2signUp.php">註冊</a>
-              
-            </div>
-        </div>
-    
-        <script>
-            /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">大自然生態</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">介紹</a>
+                    </li>
+                   
 
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(event) {
-                if (!event.target.matches('.dropbtn')) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
-                    }
-                }
-            }
-        </script>
-    </header>
-
-
-
-    <div class="container" style="text-align: center;">
-        <div class="row">
-
-            <div class="col-md-8 header1">自然生態</div>
-            <div class="col-6 col-md-4">
-                <form action="./pr-3search.php" method="post">
-
-                    <input type="text" name="search" style=" margin-top:20px;">
-                    <input type="submit" value="搜尋">
-
+                </ul>
+                <form class="d-flex" action="./pr-3search.php" method="post">
+                    <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        登入 / 註冊
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">登入</a></li>
+                        <li><a class="dropdown-item" href="./pr-2signUp.php">註冊</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">查詢帳密</a></li>
+                    </ul>
+                </li>
             </div>
-
+            
         </div>
+    </nav>
+    
 
     </div>
     <div class="container">
