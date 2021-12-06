@@ -104,10 +104,10 @@
         </div>
     </nav>
     <div class="container" style="text-align: center;margin-top:150px;">
-        <form action="" style="font-size: 20px;">
-        <label for="">帳號</label>&nbsp; <input type="text"><br>
+        <form action="./identification.php" method="post" style="font-size: 20px;">
+        <label for="">FirstName</label>&nbsp; <input type="text" name="uact"><br>
         <br>
-        <label for="">密碼</label>&nbsp; <input type="password"><br>
+        <label for="">Password</label>&nbsp; <input type="password" name="userPwd"><br>
         <br>
         <input type="submit">
         </form>
