@@ -76,7 +76,7 @@
                         <a class="nav-link active" aria-current="page" href="#"> </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pr-3Show.php" style="font-size:large;    color:deeppink">顯示所有商品</a>
+                        <a class="nav-link" href="./pr-3Show.php" style="font-size:large;    color:deeppink">商品管理</a>
                         
                     </li>
                    
@@ -87,7 +87,46 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                    <?php
+                   
+
+                    if(isset($_COOKIE['passed'])){
+                        
+                        echo'<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                                       role="button" data-bs-toggle="dropdown" aria-expanded="false">'
+                                        .$_COOKIE['name'].'</a>';
+                        echo'<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
+                        echo'<li><a class="dropdown-item" href="./pr-2login.php  ">管理頁面</a></li>';
+                       
+                        echo'<li>
+                        <hr class="dropdown-divider">
+                        </li>';
+                        echo'<li><a class="dropdown-item" href="#">登出</a></li>';
+                        echo'</ul>';
+                    }else{
+                        
+                        echo'<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        登入 / 註冊
+                    </a>';
+                        echo'<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
+                        echo'<li><a class="dropdown-item" href="./pr-2login.php  ">登入</a></li>';
+                        echo'<li><a class="dropdown-item" href="./pr-2signUp.php">註冊</a></li>';
+                        echo'<li>
+                        <hr class="dropdown-divider">
+                    </li>';
+                        echo'<li><a class="dropdown-item" href="#">查詢帳密</a></li>';
+                        echo'</ul>';
+                  
+                    }
+
+
+
+
+                    ?>
+
+
+                    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         登入 / 註冊
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -97,7 +136,7 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item" href="#">查詢帳密</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
             </div>
             

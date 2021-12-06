@@ -29,10 +29,12 @@ echo"</script>";
 } else {
   
   $id=mysqli_fetch_object($result)->PersonID;
+ 
   mysqli_free_result($result);
   $conn->close();
 
   setcookie("id",$id);
+  setcookie("name",$uact);
   setcookie("passed","TRUE");
   header("location:greeting.php");
 
