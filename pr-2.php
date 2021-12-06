@@ -103,7 +103,7 @@
                         echo'<li>
                         <hr class="dropdown-divider">
                         </li>';
-                        echo'<li><a class="dropdown-item" href="#">登出</a></li>';
+                        echo'<li><a class="dropdown-item" href="logout.php">登出</a></li>';
                         echo'</ul>';
                     }else{
                         

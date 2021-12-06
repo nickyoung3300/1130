@@ -23,7 +23,7 @@ if ($result->num_rows == 0) {
 echo "<script>";
 echo "alert('請重新確認');";
 echo"history.back();";
-echo"</script>";
+echo"</script>";    
  
   
 } else {
@@ -36,7 +36,7 @@ echo"</script>";
   setcookie("id",$id);
   setcookie("name",$uact);
   setcookie("passed","TRUE");
-  header("location:greeting.php");
+  header("location:pr-2.php");
 
 }
 
