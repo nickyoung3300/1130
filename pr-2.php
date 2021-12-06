@@ -116,7 +116,7 @@
                         echo'<li>
                         <hr class="dropdown-divider">
                     </li>';
-                        echo'<li><a class="dropdown-item" href="#">查詢帳密</a></li>';
+                        echo'<li><a class="dropdown-item" href="searchPwd.php">查詢帳密</a></li>';
                         echo'</ul>';
                   
                     }
