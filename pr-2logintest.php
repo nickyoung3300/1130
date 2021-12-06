@@ -109,37 +109,45 @@
 
     <div class="container" style="text-align: center ; font-size:50px;">
         <?php
-        
+
         $servername = "localhost";
         $username = "root";
         $password = "";
         $dbname = "test";
-        
+
         $firstName = $_POST["firstname"];
         $lastName = $_POST["lastname"];
         $county = $_POST["county"];
         $district = $_POST["district"];
         $pwd = hash("sha256", $_POST["pwd"]);
         $email = $_POST["email"];
-       
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        if ($firstName != "" && $lastName != "" && $county != "" && $district != "" && $pwd != "" && $email != "") {
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-        $sql = "INSERT INTO persons(LastName, FirstName, City, district, userPassword, userEmail) 
-        VALUES ('$lastName',' $firstName','$county','$district','$pwd','$email')";
+            $sql = "INSERT INTO persons(LastName, FirstName, City, district, userPassword, userEmail) 
+            VALUES ('$lastName',' $firstName','$county','$district','$pwd','$email')";
 
-        if ($conn->query($sql) === TRUE) {
-            echo "註冊成功";
-            echo "<h2>" . "歡迎" . $firstName . "</h2>";
+            if ($conn->query($sql) === TRUE) {
+                echo "註冊成功";
+                echo "<h2>" . "歡迎" . $firstName . "</h2>";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+
+
+            $conn->close();
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "<script>";
+            echo "alert('請重新確認');";
+            echo "history.back();";
+            echo "</script>";
         }
 
-        $conn->close();
 
 
 

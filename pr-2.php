@@ -97,7 +97,7 @@
                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">'
                                         .$_COOKIE['name'].'</a>';
                         echo'<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
-                        echo'<li><a class="dropdown-item" href="./pr-2login.php  ">管理頁面</a></li>';
+                        echo'<li><a class="dropdown-item" href="./pr-2login.php  ">用戶管理</a></li>';
                         echo'<li><a class="dropdown-item" href="./pr-2login.php  ">商品管理</a></li>';
                        
                         echo'<li>
