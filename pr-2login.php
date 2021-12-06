@@ -107,7 +107,7 @@
         <form action="./identification.php" method="post" style="font-size: 20px;">
         <label for="">FirstName</label>&nbsp; <input type="text" name="uact"><br>
         <br>
-        <label for="">Password</label>&nbsp; <input type="password" name="userPwd"><br>
+        <label for="">Password</label>&nbsp;&nbsp;&nbsp; <input type="password" name="userPwd"><br>
         <br>
         <input type="submit">
         </form>
