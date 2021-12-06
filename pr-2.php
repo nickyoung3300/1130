@@ -85,7 +85,7 @@
                 <form class="d-flex" action="./pr-3search.php" method="post">
                     <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                </form>&nbsp; &nbsp; 
                 <li class="nav-item dropdown">
 
                     <?php
@@ -98,6 +98,7 @@
                                         .$_COOKIE['name'].'</a>';
                         echo'<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
                         echo'<li><a class="dropdown-item" href="./pr-2login.php  ">管理頁面</a></li>';
+                        echo'<li><a class="dropdown-item" href="./pr-2login.php  ">商品管理</a></li>';
                        
                         echo'<li>
                         <hr class="dropdown-divider">
@@ -137,14 +138,14 @@
                         </li>
                         <li><a class="dropdown-item" href="#">查詢帳密</a></li>
                     </ul> -->
-                </li>
+                </li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
             </div>
             
         </div>
     </nav>
     
 
-    </div>
+    </div><br><br>
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3 ">
             <div class="col">
