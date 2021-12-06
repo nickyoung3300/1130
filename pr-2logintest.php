@@ -121,8 +121,7 @@
         $district = $_POST["district"];
         $pwd = hash("sha256", $_POST["pwd"]);
         $email = $_POST["email"];
-        echo "註冊成功";
-        echo "<h2>" . "歡迎" . $firstName . "</h2>";
+       
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         // Check connection
@@ -134,7 +133,8 @@
         VALUES ('$lastName',' $firstName','$county','$district','$pwd','$email')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
+            echo "註冊成功";
+            echo "<h2>" . "歡迎" . $firstName . "</h2>";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
