@@ -18,11 +18,53 @@
         font-size: 50px;
     }
 
+    .dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
 
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-color: #2980B9;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 150px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown a:hover {
+        background-color: #ddd;
+    }
+
+    .show {
+        display: block;
+    }
 </style>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">首頁</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +91,7 @@
                         登入 / 註冊
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">登入</a></li>
+                        <li><a class="dropdown-item" href="./pr-2login.php  ">登入</a></li>
                         <li><a class="dropdown-item" href="./pr-2signUp.php">註冊</a></li>
                         <li>
                             <hr class="dropdown-divider">
@@ -61,30 +103,17 @@
             
         </div>
     </nav>
-
-
-
-    <div class="container" style="text-align: center;">
-
-
-            <div class="header1">自然生態</div>
-            
-
-        
-
-    </div>
-    <div class="container" style="text-align: center ; font-size:50px;">
-      <form action="./pr-2logintest.php" method="post">
-        姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;氏:&nbsp;<input type="text" name="lastname"><br>
-        名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;子:&nbsp;<input type="text"name="firstname"><br>
-        縣&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市:&nbsp;<input type="text"name="county"><br>
-        鄉鎮市區:&nbsp;<input type="text"name="district"><br>
-        <input type="submit">   
-
-      </form>
-
+    <div class="container" style="text-align: center;margin-top:150px;">
+        <form action="" style="font-size: 20px;">
+        <label for="">帳號</label>&nbsp; <input type="text"><br>
+        <br>
+        <label for="">密碼</label>&nbsp; <input type="password"><br>
+        <br>
+        <input type="submit">
+        </form>
     </div>
 
+    
 
 
 
