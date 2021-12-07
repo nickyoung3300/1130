@@ -1,0 +1,22 @@
+資料庫解決方法
+
+透過參考資料那篇文章，成功地解決了這個問題！由於那篇文章是英文語系，在這邊我就翻成中文：
+
+Ps. 貼心提醒：做任何修改之前，請先進行備份哦！我自己有將 Xampp 整個先備份，記得我一開始有做錯，幸好有備份 XD
+
+將 Xampp\mysql\data 這個資料夾重新命名成另外一個名稱
+重新建立一個同名的資料夾
+將 Xampp\mysql\backup 內的所有內容複製到新建立的 Xampp\mysql\data
+從舊的 Xampp\mysql\data 複製除了 mysql、performance_schema 以及 phpmyadmin 等資料夾的所有檔案，到新的 mysql\data，尤其是 ibdata1 這支檔案，覆蓋到新的 mysql\data 裡
+總結與心得
+其實這就是一個夜路走多總會遇到鬼的概念，之前覺得沒什麼是因為沒有發生過，只覺得直接關機就好多方便。然而經歷過一次切身之痛就知道該學乖了，人也真是奇妙的生物，每次都要從教訓過才學會成長！XD
+
+所以希望大家不管是 Xampp 還是其他應用程式，確實將其關閉再將電腦關機，絕對不差這幾分鐘的動作的～第一次能夠修復完成或許是運氣好，如果發生第二次呢？
+
+參考資料
+XAMPP - MySQL shutdown unexpectedly - Stack Overflow
+https://stackoverflow.com/questions/18022809/xampp-mysql-shutdown-unexpectedly
+
+
+
+進入 MySql 的目錄資料夾當中，直接把資料庫對應的文件目錄刪除掉。
