@@ -5,7 +5,7 @@ require_once("dbTest.php");
 
 
 $uact=$_POST["uact"];
-$userPwd=hash("sha256", $_POST["userPwd"]);
+$userPwd=md5(  $_POST["userPwd"]);
 
 
 
@@ -16,7 +16,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM persons WHERE FirstName ='$uact' AND userPassword='$userPwd'  ";
+$sql = "SELECT * FROM t_user WHERE username ='$uact' AND `password`='$userPwd'  ";
 $result = $conn->query($sql);
 
 if ($result->num_rows == 0) {

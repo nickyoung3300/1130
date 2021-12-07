@@ -58,13 +58,12 @@ input[type=submit]:hover {
 
     </div>
     <div class="container" >
-      <form action="./pr-2logintest.php" method="post">
-        姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;氏&nbsp;<input type="text" name="lastname"><br>
-        名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;子&nbsp;<input type="text"name="firstname"><br>
-        縣&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市&nbsp;<input type="text"name="county"><br>
-        鄉鎮市區&nbsp;<input type="text"name="district"><br>
-        password<input type="text"name="pwd"><br>
-        E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"name="email"><br>
+      <form id="reg" action="register.php" method="post">
+        
+        使用者名稱<input type="text" name="username" id="user"><br>
+        
+        password<input type="text" name="password" id="pass"><br>
+        E-mail<input type="text"name="email" id="email"><br>
         <input type="submit">   
 
       </form>
