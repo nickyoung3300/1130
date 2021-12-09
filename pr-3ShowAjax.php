@@ -14,64 +14,63 @@
         table tr td {
             border: solid 1px black;
         }
-        
-    body {
-        margin-bottom: 0px;
-    }
 
-    .header1 {
-        font-size: 50px;
-    }
+        body {
+            margin-bottom: 0px;
+        }
 
-    .dropbtn {
-        background-color: #3498DB;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-    }
+        .header1 {
+            font-size: 50px;
+        }
 
-    .dropbtn:hover,
-    .dropbtn:focus {
-        background-color: #2980B9;
-    }
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
 
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #2980B9;
+        }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 150px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 150px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
 
-    .dropdown a:hover {
-        background-color: #ddd;
-    }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-    .show {
-        display: block;
-    }
+        .dropdown a:hover {
+            background-color: #ddd;
+        }
 
+        .show {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="pr-2.php">首頁</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,48 +83,47 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./pr-3Show.php" style="font-size:large;    color:deeppink">商品管理</a>
-                        
+
                     </li>
-                   
+
 
                 </ul>
                 <form class="d-flex" action="./pr-3search.php" method="post">
                     <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>&nbsp; &nbsp; 
+                </form>&nbsp; &nbsp;
                 <li class="nav-item dropdown">
 
                     <?php
-                   
 
-                    if(isset($_COOKIE['passed'])){
-                        
-                        echo'<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+
+                    if (isset($_COOKIE['passed'])) {
+
+                        echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">'
-                                        .$_COOKIE['name'].'</a>';
-                        echo'<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
-                        echo'<li><a class="dropdown-item" href="./pr-2login.php  ">用戶管理</a></li>';
-                        echo'<li><a class="dropdown-item" href="./pr-2login.php  ">商品管理</a></li>';
-                       
-                        echo'<li>
+                            . $_COOKIE['name'] . '</a>';
+                        echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
+                        echo '<li><a class="dropdown-item" href="./pr-2login.php  ">用戶管理</a></li>';
+                        echo '<li><a class="dropdown-item" href="./pr-2login.php  ">商品管理</a></li>';
+
+                        echo '<li>
                         <hr class="dropdown-divider">
                         </li>';
-                        echo'<li><a class="dropdown-item" href="logout.php">登出</a></li>';
-                        echo'</ul>';
-                    }else{
-                        
-                        echo'<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        echo '<li><a class="dropdown-item" href="logout.php">登出</a></li>';
+                        echo '</ul>';
+                    } else {
+
+                        echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         登入 / 註冊
                     </a>';
-                        echo'<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
-                        echo'<li><a class="dropdown-item" href="./pr-2login.php  ">登入</a></li>';
-                        echo'<li><a class="dropdown-item" href="./pr-2signUp.php">註冊</a></li>';
-                        echo'<li>
+                        echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
+                        echo '<li><a class="dropdown-item" href="./pr-2login.php  ">登入</a></li>';
+                        echo '<li><a class="dropdown-item" href="./pr-2signUp.php">註冊</a></li>';
+                        echo '<li>
                         <hr class="dropdown-divider">
                     </li>';
-                        echo'<li><a class="dropdown-item" href="searchPwd.php">查詢帳密</a></li>';
-                        echo'</ul>';
-                  
+                        echo '<li><a class="dropdown-item" href="searchPwd.php">查詢帳密</a></li>';
+                        echo '</ul>';
                     }
 
 
@@ -145,48 +143,48 @@
                         </li>
                         <li><a class="dropdown-item" href="#">查詢帳密</a></li>
                     </ul> -->
-                </li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                </li>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             </div>
-            
+
         </div>
-    </nav>  
+    </nav>
     <div class="container" style="text-align: center;">
         <!-- CRUD-R 連線資料庫讀取   -->
         <?php
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "test";
-        
-        // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        
-        $sql = "SELECT * FROM product  ";
-        $result = $conn->query($sql);
-        
-        if ($result->num_rows > 0) {
-            // output data of each row
-            echo "<table>";
-            echo "<tr>" . "<td>" . "商品id " . "</td>" . "<td>" . " 商品名稱 " . "</td>" . "<td>" . "商品類別" . " </td>" . "<td>" . "商品概述" . "</td>" . "</tr>";
-            while ($row = $result->fetch_assoc()) {
-                echo "<tr>" . "<td>" . $row["productId"] . "</td>" . "<td>" . $row["productName"] . "</td>" . "<td>" . $row["productCate"] . "</td>" . "<td>" . $row["productDiscr"] . "</td>" . "</tr>";
-            }
-        } else {
-            echo "0 results";
-        }
-        echo "</table>";
-        $conn->close();
-        
-        ?>
-            <!-- CRUD-R 連線資料庫讀取   -->
+        // $servername = "localhost";
+        // $username = "root";
+        // $password = "";
+        // $dbname = "test";
 
-            <!-- CRUD-U 使用者修改欄   -->
-            <form action="./pr-3Show.php" method="post">
+        // // Create connection
+        // $conn = new mysqli($servername, $username, $password, $dbname);
+        // // Check connection
+        // if ($conn->connect_error) {
+        //     die("Connection failed: " . $conn->connect_error);
+        // }
+
+        // $sql = "SELECT * FROM product  ";
+        // $result = $conn->query($sql);
+
+        // if ($result->num_rows > 0) {
+        //     // output data of each row
+        //     echo "<table>";
+        //     echo "<tr>" . "<td>" . "商品id " . "</td>" . "<td>" . " 商品名稱 " . "</td>" . "<td>" . "商品類別" . " </td>" . "<td>" . "商品概述" . "</td>" . "</tr>";
+        //     while ($row = $result->fetch_assoc()) {
+        //         echo "<tr>" . "<td>" . $row["productId"] . "</td>" . "<td>" . $row["productName"] . "</td>" . "<td>" . $row["productCate"] . "</td>" . "<td>" . $row["productDiscr"] . "</td>" . "</tr>";
+        //     }
+        // } else {
+        //     echo "0 results";
+        // }
+        // echo "</table>";
+        // $conn->close();
+
+        ?>
+        <!-- CRUD-R 連線資料庫讀取   -->
+
+        <!-- CRUD-U 使用者修改欄   -->
+        <!-- <form action="./pr-3AjaxCRUD.php" method="post">
                 
                 <h3>修改商品</h3>
                 商品ID&nbsp;<input type="text" name="pid"><br>
@@ -199,89 +197,130 @@
                 <br>
                 <input type="submit" value="修改">
                 
-            </form>
-            <!-- CRUD-U 使用者修改欄   -->
-            <form action="./pr-3Show.php" method="post">
+            </form> -->
+        <!-- CRUD-U 使用者修改欄   -->
+        <!-- CRUD-U 使用者查詢欄   -->
+        <!-- <form action="./pr-3AjaxCRUD.php" method="post">
                 
-                <h3>新增商品</h3>
+                <h3>修改商品</h3>
+                商品ID&nbsp;<input type="text" name="pid"><br>
+                <br>
+                商品名稱&nbsp;<input type="text" name="pn1"><br>
+                <br>
+                商品類別&nbsp;<input type="text" name="pc1"><br>
+                <br>
+                商品概述&nbsp;<input type="text" name="pd1"><br>
+                <br>
+                <input type="submit" value="修改">
                 
-                商品名稱&nbsp;<input type="text" name="pn"><br>
-                <br>
-                商品類別&nbsp;<input type="text" name="pc"><br>
-                <br>
-                商品概述&nbsp;<input type="text" name="pd"><br>
-                <br>
-                <input type="submit" value="新增">
-                
-            </form>
-            <!-- CRUD-C 使用者新增欄   -->
+            </form> -->
+        <!-- CRUD-U 使用者查詢欄   -->
+
+        <h3>查詢商品</h3>
+
+        商品名稱&nbsp;<input type="text" name="pn"><br>
+        <br>
+
+        <button class="btn btn-outline-success" id="searchProduct">查詢</button>
+        <script>
+            const searProd = document.getElementById("searchProduct");
+
+            function prA() {
+
+                axios({
+                        method: 'get',
+                        url: 'http://127.0.0.1/dashboard/1130/pr-3AjaxCRUD.php',
+                        'Content-Type': 'application/json',
+                    })
+                    .then(function(response) {
+                        let text = JSON.stringify(response.data).substr(1,JSON.stringify(response.data).length-6 );
+                      
+                        document.getElementById("ShowHere").innerHTML = text;
+                        console.log(JSON.stringify(response.data))
+                    });
+            }
+
+            searProd.addEventListener("click", prA);
+        </script>
+        <br>
+        <div class="container" id="ShowHere">
+
+
+        </div>
+
+        <!-- CRUD-C 使用者新增欄   -->
 
         <!-- CRUD-U 連線資料庫修改   -->
+
+
         <?php
-        if (isset($_POST["pn1"]) && $_POST["pn1"]!="") {
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "test";
-            
-            
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-            
-            $sql = "UPDATE product SET productName='$_POST[pn1]',productCate='$_POST[pc1]',productDiscr='$_POST[pd1]' WHERE productId='$_POST[pid]'";
-            
-            if (mysqli_query($conn, $sql)) {
-                echo "Record updated successfully";
-            } else {
-                echo "Error updating record: " . mysqli_error($conn);
-            }
-            $conn->close();
-            header("Location:http://127.0.0.1/dashboard/1130/pr-3Show.php");
-        }
+
+
+
+        // if (isset($_POST["pn1"]) && $_POST["pn1"]!="") {
+        //     $servername = "localhost";
+        //     $username = "root";
+        //     $password = "";
+        //     $dbname = "test";
+
+
+        //     $conn = new mysqli($servername, $username, $password, $dbname);
+
+        //     if ($conn->connect_error) {
+        //         die("Connection failed: " . $conn->connect_error);
+        //     }
+
+        //     $sql = "UPDATE product SET productName='$_POST[pn1]',productCate='$_POST[pc1]',productDiscr='$_POST[pd1]' WHERE productId='$_POST[pid]'";
+
+        //     if (mysqli_query($conn, $sql)) {
+        //         echo "Record updated successfully";
+        //     } else {
+        //         echo "Error updating record: " . mysqli_error($conn);
+        //     }
+        //     $conn->close();
+        //     header("Location:http://127.0.0.1/dashboard/1130/pr-3Show.php");
+        // }
         ?>
-            <!-- CRUD-U 連線資料庫修改   -->
-            
-            <!-- CRUD-C 連線資料庫新增   -->
-            <?php
-        if (isset($_POST["pn"]) && $_POST["pn"]!="") {
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "test";
-            $pn = $_POST["pn"];
-            $pc = $_POST["pc"];
-            $pd = $_POST["pd"];
-            
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-            
-            $sql = "INSERT INTO product (productName, productCate, productDiscr)
-            VALUES ('$_POST[pn]','$_POST[pc]', '$_POST[pd]')";
+        <!-- CRUD-U 連線資料庫修改   -->
 
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+        <!-- CRUD-C 連線資料庫新增   -->
+        <?php
+        //         if (isset($_POST["pn"]) && $_POST["pn"]!="") {
+        //             $servername = "localhost";
+        //             $username = "root";
+        //             $password = "";
+        //             $dbname = "test";
+        //             $pn = $_POST["pn"];
+        //             $pc = $_POST["pc"];
+        //             $pd = $_POST["pd"];
 
-$conn->close();
-header("Location:http://127.0.0.1/dashboard/1130/pr-3Show.php");
-}
+        //             // Create connection
+        //             $conn = new mysqli($servername, $username, $password, $dbname);
+        //             // Check connection
+        //             if ($conn->connect_error) {
+        //                 die("Connection failed: " . $conn->connect_error);
+        //             }
 
+        //             $sql = "INSERT INTO product (productName, productCate, productDiscr)
+        //             VALUES ('$_POST[pn]','$_POST[pc]', '$_POST[pd]')";
 
+        // if ($conn->query($sql) === TRUE) {
+        //     echo "New record created successfully";
+        // } else {
+        //     echo "Error: " . $sql . "<br>" . $conn->error;
+        // }
 
-?>
-<!-- CRUD-C 連線資料庫新增   -->
+        // $conn->close();
+        // header("Location:http://127.0.0.1/dashboard/1130/pr-3Show.php");
+        // }
 
 
-</div>
+
+        ?>
+        <!-- CRUD-C 連線資料庫新增   -->
+
+
+    </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
