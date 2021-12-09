@@ -24,20 +24,31 @@ echo "<script>";
 echo "alert('請重新確認');";
 echo"history.back();";
 echo"</script>";    
- 
-  
+
+
 } else {
   
-  $id=mysqli_fetch_object($result)->PersonID;
- 
-  mysqli_free_result($result);
-  $conn->close();
+  $status=mysqli_fetch_object($result)->status;
+  if($status==0){
+    echo "<script>";
+    echo "alert('帳戶尚需開通認證');";
+    echo"history.back();";
+    echo"</script>";    
+    
+  }else{
 
-  setcookie("id",$id);
-  setcookie("name",$uact);
-  setcookie("passed","TRUE");
-  header("location:pr-2.php");
-
+    $id=mysqli_fetch_object($result)->id;
+   
+    mysqli_free_result($result);
+    $conn->close();
+  
+    setcookie("id",$id);
+    setcookie("name",$uact);
+    setcookie("passed","TRUE");
+    header("location:pr-2.php");
+  }
+  
+  
 }
 
 

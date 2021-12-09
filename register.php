@@ -68,7 +68,7 @@ if (mysqli_insert_id($conn)) {//寫入成功，發郵件
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = "=?UTF-8?B?".base64_encode('⭐      Go 生態   帳號開通  ')."?=";
-    $mail->Body    = "<h3>親愛的" . $username1 ."：</h3>". "<h3>感謝您在 [ Go 生態平台 ] 註冊了新帳號。</h3><h3>請點選連結啟用您的帳號。</h3><a href='http://127.0.0.1/dashboard/1130/active.php?verify=" . $token . "' target='_blank'>http://127.0.0.1/dashboard/1130/active.php?verify=" . $token ."</a><br/>該連結24小時內有效。<br/>如果此次啟用請求非你本人所發，請忽略本郵件。<br/><h3 style='text-align:right'>-------- Go生態平台 上</h3>";
+    $mail->Body    = "<h1>親愛的" . $username1 ."：</h1>". "<h1>感謝您在 [ Go 生態平台 ] 註冊了新帳號。</h1><h1>請點選連結啟用您的帳號。</h1><a href='http://127.0.0.1/dashboard/1130/active.php?verify=" . $token . "' target='_blank'>http://127.0.0.1/dashboard/1130/active.php?verify=" . $token ."</a><br/><h3>該連結24小時內有效。<h3><h3>如果此次啟用請求非你本人所發，請忽略本郵件。</h3><h1 style='text-align:right'>-------- Go生態平台 上</h1>";
     
 
     $mail->send();

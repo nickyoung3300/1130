@@ -146,7 +146,7 @@
     
 
     </div><br><br>
-    <div class="container">
+    <div class="container" style="text-align: center;">
         <h1>驗證信件已寄出</h1>
         
     </div>
