@@ -26,10 +26,13 @@ if($row){
             die(0);
             }
         $msg = '啟用成功！';
-        echo $msg;
+        echo"<div style='text-align:center'>";
+        echo "<h1>".$msg."</h1>";
+        echo"<h1>將自動導向登入頁...</h1>";
+        echo"</div>";
         echo"<script>";
         // echo"function  (){location.href = 'http://127.0.0.1/dashboard/1130/pr-2login.php'};";
-        echo"setTimeout(function  (){location.href = 'http://127.0.0.1/dashboard/1130/pr-2login.php'},2000);";
+        echo"setTimeout(function  (){location.href ='http://127.0.0.1/dashboard/1130/pr-2login.php'},3000);";
         
         echo "</script>";   
     }
