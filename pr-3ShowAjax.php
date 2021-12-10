@@ -218,23 +218,27 @@
 
         <h3>查詢商品</h3>
 
-        商品名稱&nbsp;<input type="text" name="pn"><br>
+        商品名稱&nbsp;<input type="text" name="pn" id="pnVal"><br>
         <br>
 
         <button class="btn btn-outline-success" id="searchProduct">查詢</button>
         <script>
             const searProd = document.getElementById("searchProduct");
-
+            
             function prA() {
-
+                const pnVal = document.getElementById("pnVal").value;
+                console.log(pnVal); 
                 axios({
                         method: 'get',
                         url: 'http://127.0.0.1/dashboard/1130/pr-3AjaxCRUD.php',
                         'Content-Type': 'application/json',
+                        params: {
+                            productName:pnVal,
+                        }
                     })
                     .then(function(response) {
-                        let text = JSON.stringify(response.data).substr(1,JSON.stringify(response.data).length-6 );
-                      
+                        let text = JSON.stringify(response.data).substr(1, JSON.stringify(response.data).length - 6);
+
                         document.getElementById("ShowHere").innerHTML = text;
                         console.log(JSON.stringify(response.data))
                     });

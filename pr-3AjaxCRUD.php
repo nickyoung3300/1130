@@ -6,8 +6,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
+$pnVal=$_GET['productName'];
 
-$sql = "SELECT * FROM product WHERE productName ='好蘋果'  ";
+$sql = "SELECT * FROM product WHERE productName LIKE '%$pnVal%'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
