@@ -149,72 +149,6 @@
         </div>
     </nav>
     <div class="container" style="text-align: center;">
-        <!-- CRUD-R 連線資料庫讀取   -->
-        <?php
-
-        // $servername = "localhost";
-        // $username = "root";
-        // $password = "";
-        // $dbname = "test";
-
-        // // Create connection
-        // $conn = new mysqli($servername, $username, $password, $dbname);
-        // // Check connection
-        // if ($conn->connect_error) {
-        //     die("Connection failed: " . $conn->connect_error);
-        // }
-
-        // $sql = "SELECT * FROM product  ";
-        // $result = $conn->query($sql);
-
-        // if ($result->num_rows > 0) {
-        //     // output data of each row
-        //     echo "<table>";
-        //     echo "<tr>" . "<td>" . "商品id " . "</td>" . "<td>" . " 商品名稱 " . "</td>" . "<td>" . "商品類別" . " </td>" . "<td>" . "商品概述" . "</td>" . "</tr>";
-        //     while ($row = $result->fetch_assoc()) {
-        //         echo "<tr>" . "<td>" . $row["productId"] . "</td>" . "<td>" . $row["productName"] . "</td>" . "<td>" . $row["productCate"] . "</td>" . "<td>" . $row["productDiscr"] . "</td>" . "</tr>";
-        //     }
-        // } else {
-        //     echo "0 results";
-        // }
-        // echo "</table>";
-        // $conn->close();
-
-        ?>
-        <!-- CRUD-R 連線資料庫讀取   -->
-
-        <!-- CRUD-U 使用者修改欄   -->
-        <!-- <form action="./pr-3AjaxCRUD.php" method="post">
-                
-                <h3>修改商品</h3>
-                商品ID&nbsp;<input type="text" name="pid"><br>
-                <br>
-                商品名稱&nbsp;<input type="text" name="pn1"><br>
-                <br>
-                商品類別&nbsp;<input type="text" name="pc1"><br>
-                <br>
-                商品概述&nbsp;<input type="text" name="pd1"><br>
-                <br>
-                <input type="submit" value="修改">
-                
-            </form> -->
-        <!-- CRUD-U 使用者修改欄   -->
-        <!-- CRUD-U 使用者查詢欄   -->
-        <!-- <form action="./pr-3AjaxCRUD.php" method="post">
-                
-                <h3>修改商品</h3>
-                商品ID&nbsp;<input type="text" name="pid"><br>
-                <br>
-                商品名稱&nbsp;<input type="text" name="pn1"><br>
-                <br>
-                商品類別&nbsp;<input type="text" name="pc1"><br>
-                <br>
-                商品概述&nbsp;<input type="text" name="pd1"><br>
-                <br>
-                <input type="submit" value="修改">
-                
-            </form> -->
-        <!-- CRUD-U 使用者查詢欄   -->
 
         <h3>查詢商品</h3>
 
@@ -222,18 +156,19 @@
         <br>
 
         <button class="btn btn-outline-success" id="searchProduct">查詢</button>
+
         <script>
             const searProd = document.getElementById("searchProduct");
-            
+
             function prA() {
                 const pnVal = document.getElementById("pnVal").value;
-                console.log(pnVal); 
+                console.log(pnVal);
                 axios({
                         method: 'get',
                         url: 'http://127.0.0.1/dashboard/1130/pr-3AjaxCRUD.php',
                         'Content-Type': 'application/json',
                         params: {
-                            productName:pnVal,
+                            productName: pnVal,
                         }
                     })
                     .then(function(response) {
@@ -247,7 +182,58 @@
             searProd.addEventListener("click", prA);
         </script>
         <br>
-        <div class="container" id="ShowHere">
+
+        <div class="container" id="ShowHere" style="margin-top:20px;">
+
+
+        </div>
+
+    </div>
+    <div class="container" style="text-align: center;">
+
+        <h3>新增商品</h3>
+
+        商品名稱&nbsp;<input type="text" name="pn1" id="pnVal1"><br>
+        <br>
+        商品類別&nbsp;<input type="text" name="pc1" id="pnVal2"><br>
+        <br>
+        商品概述&nbsp;<input type="text" name="pd1" id="pnVal3"><br>
+        <br>
+
+        <button class="btn btn-warning" id="CreateProduct">新增</button>
+        <script>
+            const CreateProd = document.getElementById("CreateProduct");
+
+            function prA1() {
+                const pnVal1 = document.getElementById("pnVal1").value;
+                const pnVal2 = document.getElementById("pnVal2").value;
+                const pnVal3 = document.getElementById("pnVal3").value;
+                console.log(pnVal3);
+                console.log(typeof(pnVal3));
+
+                axios({
+                        method: 'get',
+                        url: 'http://127.0.0.1/dashboard/1130/pr-3AjaxCRUD_C.php',
+                      
+                        params: {
+                            productName: pnVal1,
+                            productClass: pnVal2,
+                            productDescription: pnVal3,
+                        }
+                    }).then((res) => {
+                        console.table(res.data)
+                    })
+                    .catch((error) => {
+                        console.error(error)
+                    })
+
+            }
+
+            CreateProd.addEventListener("click", prA1);
+        </script>
+        <br>
+
+        <div class="container" id="ShowHere" style="margin-top:20px;">
 
 
         </div>
