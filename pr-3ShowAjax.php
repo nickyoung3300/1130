@@ -214,17 +214,22 @@
                 axios({
                         method: 'get',
                         url: 'http://127.0.0.1/dashboard/1130/pr-3AjaxCRUD_C.php',
-                      
+
                         params: {
                             productName: pnVal1,
                             productClass: pnVal2,
                             productDescription: pnVal3,
                         }
                     }).then((res) => {
-                        console.table(res.data)
+                        console.table(res.data);
+                        document.getElementById("ShowHere1").innerText = pnVal1 + "新增成功";
+                        document.getElementById("pnVal1").value="";
+                        document.getElementById("pnVal2").value="";
+                        document.getElementById("pnVal3").value="";
+
                     })
                     .catch((error) => {
-                        console.error(error)
+                        console.log(error)
                     })
 
             }
@@ -233,7 +238,7 @@
         </script>
         <br>
 
-        <div class="container" id="ShowHere" style="margin-top:20px;">
+        <div class="container" id="ShowHere1" style="margin-top:20px;">
 
 
         </div>
