@@ -79,6 +79,10 @@
                         <a class="nav-link" href="./pr-3Show.php" style="font-size:large;    color:deeppink">商品管理</a>
                         
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ShopingCart_main.php" style="font-size:1.2rem;    color:deeppink">購物</a>
+                        
+                    </li>
                    
 
                 </ul>
