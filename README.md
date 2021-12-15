@@ -5,18 +5,16 @@
 
 <h3>首頁</h3>
 <img src="./Document - Google Chrome 2021_12_3 .png"><br>
-<p>
 
-1.註冊功能 and RWD 示範 (CSS+Bootstrap)
-2.驗證信功能 (MySQL+PHP+JavaScript+PHPMailer技術)
-  密碼加密進資料庫 (資安)
-  驗證信給token
-3.PHP 連線資料庫 做操作
-4.Ajax_Axios 連線資料庫做操作(AJAX)
-5.購物車示範 (COOKIE)
 
-</p>
-<img src="./會員註冊頁.png"><br>
+<h3>1.註冊功能 and RWD 示範 (CSS+Bootstrap)</h3>
+<h3>2.驗證信功能 (MySQL+PHP+JavaScript+PHPMailer技術)</h3>
+<h3>  密碼加密進資料庫 (資安)</h3>
+<h3>  驗證信給token</h3>
+<h3>3.PHP 連線資料庫 做操作</h3>
+<h3>4.Ajax_Axios 連線資料庫做操作(AJAX)</h3>
+<h3>5.購物車示範 (COOKIE)</h3>
+
 <h3>會員註冊 帳密Hash進資料庫</h3><br>
 
 <img src="./Hash保護.png"><br>
