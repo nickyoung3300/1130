@@ -80,7 +80,7 @@
                         
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./ShopingCart_main.php" style="font-size:1.2rem;    color:deeppink">購物</a>
+                        <a class="nav-link" href="./ShoppingCart_main.php" style="font-size:1.2rem;    color:deeppink">購物</a>
                         
                     </li>
                    

@@ -140,9 +140,9 @@
 
     <div class="container">
         <nav class="nav nav-pills nav-fill">
-            <a class="nav-link " style=" color:darkgreen;" href="./ShopingCart_main.php">商品總覽</a>
-            <a class="nav-link" style=" color:darkgreen;" href="./ShopingCart_check.php">檢視購物車</a>
-            <a class="nav-link" style="background-color:cornsilk; color:darkgreen" href="./ShopingOrderDetail.php">結帳</a>
+            <a class="nav-link " style="background-color:while; color:darkgreen;" href="./ShoppingCart_main.php">商品總覽</a>
+            <a class="nav-link"  style="background-color:cornsilk; color:darkgreen;" href="./ShoppingCart_check.php">檢視購物車</a>
+            <a class="nav-link" style="background-color:while; color:darkgreen;" href="./ShoppingOrderDetail.php">結帳</a>
 
         </nav>
     </div>
