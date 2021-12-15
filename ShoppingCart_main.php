@@ -179,7 +179,7 @@
             $row=mysqli_fetch_assoc($result);
             echo"<form method='post' action='ShoppingCart_notice.php?productId=".
             $row["productId"]."&productName=".urlencode($row["productName"]).
-            "&productPrice=".$row["productPrice"].">";
+            "&productPrice=".$row["productPrice"]."'>";  //注意
 
             echo"<tr align='center' bgcolor='#EDEAB1'>";
             echo"<td>".$row["productId"]."</td>";
