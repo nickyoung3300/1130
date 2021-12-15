@@ -5,14 +5,19 @@
 
 <h3>首頁</h3>
 <img src="./Document - Google Chrome 2021_12_3 .png"><br>
-<h3>會員註冊_1 選右上方選單</h3><br>
-<img src="./右上方選註冊.png"><br>
-<h3>會員註冊_2 填註冊表單</h3><br>
+<p>
 
+1.註冊功能 and RWD 示範 (CSS+Bootstrap)
+2.驗證信功能 (MySQL+PHP+JavaScript+PHPMailer技術)
+  密碼加密進資料庫 (資安)
+  驗證信給token
+3.PHP 連線資料庫 做操作
+4.Ajax_Axios 連線資料庫做操作(AJAX)
+5.購物車示範 (COOKIE)
+
+</p>
 <img src="./會員註冊頁.png"><br>
-<h3>會員註冊_2 帳密Hash進資料庫</h3><br>
+<h3>會員註冊 帳密Hash進資料庫</h3><br>
 
 <img src="./Hash保護.png"><br>
 
-<h3>會員註冊_3 會員註冊成功</h3><br>
-<img src="./註冊成功畫面.png"><br>
