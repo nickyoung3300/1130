@@ -61,6 +61,9 @@
     .show {
         display: block;
     }
+    table tr {
+        border:1px black solid;
+    }
 </style>
 
 <body>
@@ -80,7 +83,7 @@
 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./ShopingCart_main.php" style="font-size:1.2rem;    color:deeppink">購物</a>
+                        <a class="nav-link" href="./ShoppingCart_main.php" style="font-size:1.2rem;    color:deeppink">購物</a>
 
                     </li>
 
@@ -141,11 +144,63 @@
     <div class="container">
         <nav class="nav nav-pills nav-fill">
             <a class="nav-link " style="background-color:cornsilk; color:darkgreen;" href="./ShoppingCart_main.php">商品總覽</a>
-            <a class="nav-link"style="background-color:while; color:darkgreen;" href="./ShoppingCart_check.php">檢視購物車</a>
-            <a class="nav-link" style="background-color:while; color:darkgreen;"     href="./ShoppingOrderDetail.php">結帳</a>
+            <a class="nav-link" style="background-color:while; color:darkgreen;" href="./ShoppingCart_check.php">檢視購物車</a>
+            <a class="nav-link" style="background-color:while; color:darkgreen;" href="./ShoppingOrderDetail.php">結帳</a>
 
         </nav>
     </div>
+
+    <table align="center" width="600"cellspacing="2" style="text-align: center;">
+        <tr height="30" bgcolor="#BABA76" align="center">
+            <td>商品編號</td>
+            <td>商品名</td>
+            <td>定價</td>
+            <td>購買數量</td>
+            <td>進行訂購</td>
+
+        </tr>
+        <?php
+
+        require_once("dbTest.php");
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT * FROM productstore ";
+        $result = $conn->query($sql);
+
+        $total=mysqli_num_rows($result);
+        
+        for($i=0;$i<$total;$i++){
+            $row=mysqli_fetch_assoc($result);
+            echo"<form method='post' action='ShoppingCart_notice.php?productId=".
+            $row["productId"]."&productName=".urlencode($row["productName"]).
+            "&productPrice=".$row["productPrice"].">";
+
+            echo"<tr align='center' bgcolor='#EDEAB1'>";
+            echo"<td>".$row["productId"]."</td>";
+            echo"<td style='text-align: left;'>".$row["productName"]."</td>";
+            echo"<td style='text-align: right';>".$row["productPrice"]."</td>";
+            echo"<td><input type='text' name='quantity'size='5'value='1'></td>";
+            echo"<td><input type='submit'value='放入購物車'></td>";
+            echo"</tr>";
+            echo"</form>";
+
+        }
+       
+        mysqli_free_result($result);
+
+        $conn->close();
+
+
+
+        ?>
+
+    </table>
 
 
 
