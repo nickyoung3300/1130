@@ -3,8 +3,8 @@
 <h3>12/15 的 YouTube 演示作品:<a href="https://www.youtube.com/watch?v=kI0idW-m0LQ"> https://www.youtube.com/watch?v=kI0idW-m0LQ</a></h3>
 <h3>1.註冊功能 and RWD 示範 (CSS+Bootstrap)</h3>
 <h3>2.驗證信功能 (MySQL+PHP+JavaScript+PHPMailer技術)</h3>
-<h3>&nbsp; &nbsp; 密碼加密進資料庫 (資安)</h3>
-<h3>&nbsp; &nbsp; 驗證信給token</h3>
+<h3>&nbsp; 密碼加密進資料庫 (資安)</h3>
+<h3>&nbsp; 驗證信給token</h3>
 <h3>3.PHP 連線資料庫 做操作</h3>
 <h3>4.Ajax_Axios 連線資料庫做操作(AJAX)</h3>
 <h3>5.購物車示範 (COOKIE)</h3>
