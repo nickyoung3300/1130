@@ -20,7 +20,7 @@ if(empty($_COOKIE["product_Id_list"])){
     $product_quantity_list_array=explode(",",$_COOKIE['product_quantity_list']);
     
     if(in_array($product_Id,$product_Id_list_array) ){
-        $key=array_search($product_Id_list,$product_Id_list_array);
+        $key=array_search($product_Id,$product_Id_list_array);
         $product_quantity_list_array[$key]+=$product_quantity;
     }else{
         $product_Id_list_array[]=$product_Id;
@@ -185,8 +185,8 @@ if(empty($_COOKIE["product_Id_list"])){
     <div class="container">
         <nav class="nav nav-pills nav-fill">
             <a class="nav-link " style=" color:darkgreen;" href="./ShoppingCart_main.php">商品總覽</a>
-            <a class="nav-link" style=" color:darkgreen;" href="./ShoppingCart_check.php">檢視購物車</a>
-            <a class="nav-link" style="background-color:cornsilk; color:darkgreen" href="./ShoppingOrderDetail.php">結帳</a>
+            <a class="nav-link" style="background-color:cornsilk; color:darkgreen " href="./ShoppingCart_check.php">檢視購物車</a>
+            <a class="nav-link" style="color:darkgreen;" href="./ShoppingOrderDetail.php">結帳</a>
 
         </nav>
     </div>
