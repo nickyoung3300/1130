@@ -141,12 +141,60 @@
     <div class="container">
         <nav class="nav nav-pills nav-fill">
             <a class="nav-link " style="background-color:while; color:darkgreen;" href="./ShoppingCart_main.php">商品總覽</a>
-            <a class="nav-link"  style="background-color:cornsilk; color:darkgreen;" href="./ShoppingCart_check.php">檢視購物車</a>
+            <a class="nav-link" style="background-color:cornsilk; color:darkgreen;" href="./ShoppingCart_check.php">檢視購物車</a>
             <a class="nav-link" style="background-color:while; color:darkgreen;" href="./ShoppingOrderDetail.php">結帳</a>
 
         </nav>
     </div>
 
+    <table border="0" align="center" width="800">
+
+        <tr bgcolor="#ACACFF" hight="30" align="center">
+            <td>商品編號</td>
+            <td>商品名</td>
+            <td>定價</td>
+            <td>購買數量</td>
+            <td>小計</td>
+            <td>變更數量</td>
+        </tr>
+        <?php
+        if (empty($_COOKIE["product_Id_list"])) {
+            echo "<tr align='center'>";
+            echo "<td colspan='6'>目前購物車內空空的!</td>";
+            echo "</td>";
+        } else {
+            $product_Id_list_array = explode(",", $_COOKIE['product_Id_list']);
+            $product_Name_list_array = explode(",", $_COOKIE['product_Name_list']);
+            $product_Price_list_array = explode(",", $_COOKIE['product_Price_list']);
+            $product_quantity_list_array = explode(",", $_COOKIE['product_quantity_list']);
+            
+            $total=0;
+            for($i=0;$i<count($product_Id_list_array);$i++){
+                $sub_tatol=$product_Price_list_array[$i]*$product_quantity_list_array[$i];
+                $total+=$sub_tatol;
+
+                echo"<form method='post'action='ShoppingCart_chang.php?product_Id=".$product_Id_list_array[$i]."'>";
+                echo"<tr bgcolor='#EDEAB1'>";
+                echo"<td align='center'>".$product_Id_list_array[$i]."</td>";
+                echo"<td align='center'>".$product_Name_list_array[$i]."</td>";
+                echo"<td align='center'>".$product_Price_list_array[$i]."</td>";
+                echo"<td align='center'><input type='text' name='quantity' value='".$product_quantity_list_array[$i]."'size='5'></td>";
+                echo"<td align='right'>".$sub_tatol."</td>";
+                echo"<td align='center'><input type='submit' value='變更'></td>";
+                echo"</tr>";
+                echo"</form>";
+            
+            }
+            echo"<tr align='right' bgcolor='#EDEAB1'>";
+            echo"<td colspan='6'>總金額".$total."</td>";
+            echo"</tr>";
+        }
+
+
+        ?>
+
+
+    </table>
 
 
 
