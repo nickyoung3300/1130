@@ -188,6 +188,13 @@
             echo"<tr align='right' bgcolor='#EDEAB1'>";
             echo"<td colspan='6'>總金額".$total."</td>";
             echo"</tr>";
+
+            echo"<tr align='center'>";
+            echo"<td colspan='6'>"."<br>"."<input type='submit' value='清空購物車' 
+            OnClick=\"javascript:window.open('ShoppingCart_cleanAll.php','_self')\">";
+            echo"</td>";
+            echo"</tr >";
+
         }
 
 
