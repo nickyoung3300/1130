@@ -180,7 +180,7 @@
                 echo"<td align='center'>".$product_Price_list_array[$i]."</td>";
                 echo"<td align='center'><input type='text' name='quantity' value='".$product_quantity_list_array[$i]."'size='5'></td>";
                 echo"<td align='right'>".$sub_tatol."</td>";
-                echo"<td align='center'><input type='submit' value='變更'></td>";
+                echo"<td align='center'><input type='submit' value='更改'></td>";
                 echo"</tr>";
                 echo"</form>";
             
@@ -190,8 +190,8 @@
             echo"</tr>";
 
             echo"<tr align='center'>";
-            echo"<td colspan='6'>"."<br>"."<input type='submit' value='清空購物車' 
-            OnClick=\"javascript:window.open('ShoppingCart_cleanAll.php','_self')\">";
+            echo"<td colspan='6'>"."<br>"."<button class='btn btn-outline-dark' 
+            OnClick=\"javascript:window.open('ShoppingCart_cleanAll.php','_self')\">清空購物車</button>";
             echo"</td>";
             echo"</tr >";
 
