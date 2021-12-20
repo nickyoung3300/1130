@@ -1,6 +1,6 @@
 <h1>Web實作概覽</h1>
 <h3>PHP連結&nbsp;MySQL資料庫&nbsp;有商品CRUD 功能+RWD設計實作</h3><br>
-<h3>12/15 的 YouTube 演示作品:<a href="https://www.youtube.com/watch?v=kI0idW-m0LQ"> https://www.youtube.com/watch?v=kI0idW-m0LQ</a></h3>
+<h3>12/20 的 YouTube 演示作品:<a href="https://youtu.be/CweuNMnHmNU"> https://youtu.be/CweuNMnHmNU</a></h3>
 <h5>新功能每日增加中...</h5>
 <h3>1.註冊功能 and RWD 示範 (CSS+Bootstrap)</h3>
 <h3>2.驗證信功能 (MySQL+PHP+JavaScript+PHPMailer技術)</h3>
